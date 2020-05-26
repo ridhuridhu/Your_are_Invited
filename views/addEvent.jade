@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .container
+        h1 Add Event 
+        hr
+        .card
+            form(action='/addEvent', method='post')
+                .form-group
+                label(for='') Title
+                input.form-control(type='text', name='header', id='', placeholder='enter Title')
+                .form-group
+                label(for='') Content 
+                input.form-control(type='text',style="height:300px", name='body', id='', placeholder='describe your event')
+                .form-group
+                label(for='') Footnote
+                input.form-control(type='text', name='footer', id='', placeholder='enter footnotes')
+                hr
+                input.btn.btn-danger(type='submit', value='Submit')
+
+    br
+    br
