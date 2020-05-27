@@ -3,17 +3,33 @@ extends layout
 block content
     .container
         h1 Add Event 
+        
         hr
+        if(linkId)
+            p your invite Link is: 
+                a(href=`/view/${linkId}`) http://127.0.0.1:3000/view/#{linkId}
+            br
+            hr
         .card
             form(action='/addEvent', method='post')
                 .form-group
-                label(for='') Title
+                label(for='') Title :
                 input.form-control(type='text', name='header', id='', placeholder='enter Title')
                 .form-group
-                label(for='') Content 
+                label(for='') Content :
                 input.form-control(type='text',style="height:300px", name='body', id='', placeholder='describe your event')
+                label(for='') Private Event  :
+                input(type='checkbox', name='private', id='', )
+                p Tick if Private Event 
+                .text-muted ** private Event can only be shared by invited link
+                label(for='') Event On :
+                input.form-control(type='text', name='eventOn', id='', placeholder='schedule event date')
+                .text-muted ex:12/12/2020
+                label(for='') Last Date to Accept Invitaion :
+                input.form-control(type='number', name='duration', id='', placeholder='Duration number of days') 
+                .text-muted number of days 
                 .form-group
-                label(for='') Footnote
+                label(for='') Footnote :
                 input.form-control(type='text', name='footer', id='', placeholder='enter footnotes')
                 hr
                 input.btn.btn-danger(type='submit', value='Submit')

@@ -11,6 +11,9 @@ const InvitaionSchema = new mongoose.Schema({
     Body:{type:String},
     Footer:{type:String},
     Date:{type:Date,default:Date.now()},
+    EventOn:{type:String},
+    Duration:{type:Number},
+    private:{type:Boolean},
     interestedBy:[{
         type:Schema.Types.ObjectId,ref:"User"
     }],

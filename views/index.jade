@@ -3,31 +3,46 @@ block content
     .container
         h1 🍻 You`re Invited 🍻
         hr
+        .card
+            .row
+                .col
+                    a.btn(href="#") Total no.of Invitations Created : #{Created}
+                .col
+                    a.btn(href="#") Total no.of Invitations Accepted : #{Accepted }
+        hr
         if invitation
             -invitation.reverse();
                 .col
                     -for(let i=0;i<invitation.length;i++){
                         .invitaion
                             h3 #{invitation[i].Header}
-                            //p   #{invitation[i].hostByName}
+                            .row
+                                .col
+                                    p Event on #{invitation[i].EventOn}
+                                .col
+                                    p   -By #{invitation[i].hostByName}
                             hr
                             p #{invitation[i].Body}
                             hr
                             footer
                                 p #{invitation[i].Footer}
-                                -if(invitation[i].interestedBy.length)
-                                    -for(var j=0;j<invitation[i].interestedBy.length;j++){ 
-                                        -if(JSON.stringify(invitation[i].interestedBy[j])== JSON.stringify(user._id)){
-                                            a.btn(href=`/iam/${user.userId}/not_interested/${invitation[i].InvitaionId}/interestedBy/${j}`) Decline
-                                        -}
+                                .row
+                                    .col
+                                        -if(invitation[i].interestedBy.length)
+                                            -for(var j=0;j<invitation[i].interestedBy.length;j++){ 
+                                                -if(JSON.stringify(invitation[i].interestedBy[j])== JSON.stringify(user._id)){
+                                                    a.btn(href=`/iam/${user.userId}/not_interested/${invitation[i].InvitaionId}/interestedBy/${j}`) Decline
+                                                -}
+                                                -else{
+                                                    a.btn(href=`/iam/${user.userId}/interested/${invitation[i].InvitaionId}`) Accept
+                                                -}
+                                            -}
                                         -else{
                                             a.btn(href=`/iam/${user.userId}/interested/${invitation[i].InvitaionId}`) Accept
                                         -}
-                                    -}
-                                -else{
-                                    a.btn(href=`/iam/${user.userId}/interested/${invitation[i].InvitaionId}`) Accept
-                                -}
-                               
+                                    .col
+                                        a.btn(href=`/view/${invitation[i].InvitaionId}`) View Invitation 
+                                
                     hr
                     -}
              
