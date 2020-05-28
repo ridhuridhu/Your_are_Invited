@@ -10,13 +10,14 @@ block content
                     a(href=`/view/${invitaion.InvitaionId}`) http://127.0.0.1:3000/view/#{invitaion.InvitaionId}
                 hr
         if invitaion
-            h3 #{invitaion.Header}
-            p  #{invitaion.Body}
-            p #{invitaion.Footer}
-            p #{invitaion}
-            p #{invitaion.Date}
-            -var time= Date(Date.now())
-            var timeCurrent =#{time}-#{invitaion.Date}
-            p #{timeCurrent}
+            //p   #{invitaion}
+            .invitaion
+                h3 #{invitaion.Header}
+                hr
+                p #{invitaion.Body}
+                hr
+                footer
+                    p #{invitaion.Footer}
+
         else   
             h3 No invitation Found in Database 😅
