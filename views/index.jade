@@ -34,9 +34,6 @@ block content
                                                     -if(JSON.stringify(invitation[i].interestedBy[j])== JSON.stringify(user._id)){
                                                         a.btn(href=`/iam/${user.userId}/not_interested/${invitation[i].InvitaionId}/interestedBy/${j}`) Decline
                                                     -}
-                                                    -else{
-                                                        a.btn(href=`/iam/${user.userId}/interested/${invitation[i].InvitaionId}`) Accept
-                                                    -}
                                                 -}
                                             -else{
                                                 a.btn(href=`/iam/${user.userId}/interested/${invitation[i].InvitaionId}`) Accept
