@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     Invitation.find({},(err,invitation)=>{
       if (err) throw err;
       for(let i=0;i<invitation.length;i++){
-        if((invitation[i].interestedBy.length)){
+        if((invitation[i].interestedBy.length)){  
           for(var j=0;j<invitation[i].interestedBy.length;j++){
             if(JSON.stringify(invitation[i].interestedBy[j])==JSON.stringify(req.user._id)){
               Accepted++;

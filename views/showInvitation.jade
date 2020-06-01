@@ -1,6 +1,7 @@
 extends layout
 
 block content
+    link(rel="stylesheet", href="../style/showInvitation.css")
     .container
         h1 Invitaion
         hr
@@ -10,14 +11,15 @@ block content
                     a(href=`/view/${invitaion.InvitaionId}`) http://127.0.0.1:3000/view/#{invitaion.InvitaionId}
                 hr
         if invitaion
-            //p   #{invitaion}
-            .invitaion
-                h3 #{invitaion.Header}
-                hr
+            .imgCard
+                img(src='../image/card.jpg', alt='')
+                h1  #{invitaion.Header}
                 p #{invitaion.Body}
-                hr
-                footer
-                    p #{invitaion.Footer}
+                footer #{invitaion.Footer}
 
+        
         else   
             h3 No invitation Found in Database 😅
+        br
+        br
+        br

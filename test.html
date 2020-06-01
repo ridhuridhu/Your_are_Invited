@@ -13,66 +13,55 @@
 <body class="container">
   <br>
   <br>
-  <img id="scream" width="500" height="375"
-src="rose.jpg" alt="The Scream">
+  <div class="imgCard">
+    <img src="card.jpg" alt="">
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, molestiae? sit amet consectetur adipisicing elit. Nisi, voluptas itaque quasi quae porro sint repellendus officia quos iste obcaecati sequi cum nobis laudantium blanditiis.</p>
+    
+    <footer>
+      Lorem ipsum dolor sit amet.
+    </footer>
+  </div>
 
-  <br>
-
-<div class="container">
- <canvas width="500px" height="432px" id="canvas" ></canvas>
-
-</div>
-  <p id="hi" > Lorem, ipsum. </p>
-  <p id="i">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae debitis facilis dolorem omnis? Itaque id mollitia quaerat tenetur enim ab voluptate ullam minus molestias fugit.</p>
 </body>
 </html>
-<script>
-  window.onload = function() {
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var img = document.getElementById("scream");
-   ctx.drawImage(img, 0, 0,canvas.width,canvas.height);
-    var title=document.getElementById("hi").innerHTML;
-   ctx.font = "600 40px serif";
-    var body=document.getElementById("i").innerHTML;
-   ctx.fillStyle = "black";
-   ctx.fillText(title, 100, 80);
-   ctx.fillText(body,30,50)
-   wrapText(ctx, "How much wood would a woodchuck chuck if a woodchuck could chuck wood?", 20, 20, 150, 14);
-
-
-   function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
-       var words = text.split(' ');
-       var line = '';
-       var lineHeight = fontSize+2;
-   
-       context.font = fontSize + " " + fontFace;
-   
-       for (var n = 0; n < words.length; n++) {
-           var testLine = line + words[n] + ' ';
-           var metrics = context.measureText(testLine);
-           var testWidth = metrics.width;
-           if (testWidth > maxWidth) {
-               context.fillText(line, x, y);
-               line = words[n] + ' ';
-               y += lineHeight;
-           } else {
-               line = testLine;
-           }
-       }
-       context.fillText(line, x, y);
-   }
-
-  };
-  //baby.src="card3.jpg";
-</script>
-
 <style>
-  canvas{
-    border: 1px solid black;
+  body{
+    background-color: black;
   }
-  img{
-    visibility: hidden;
-    display: none;
+  .imgCard{
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: #303960;
+    text-shadow: 2px 1px pink;
+    margin: auto;
+    border: 2px solid antiquewhite;
+   
+
+  }
+  .imgCard img{
+    width: 100%;
+    max-width: 450px;
+
+  }
+  .imgCard h1 {
+    position: relative;
+    margin-top: -450px;
+    text-align: center;
+    font-family: serif;
+  }
+  .imgCard p{
+    margin-top: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+
+  }
+  .imgCard footer{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
   }
 </style>
+
