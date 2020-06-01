@@ -1,4 +1,4 @@
-![](https://github.com/ridhuridhu/Your_are_Invited/blob/master/screenshots/Screenshot_2020-06-01%20You%60re%20Invited%20%F0%9F%A5%82.png)<
+![](https://github.com/ridhuridhu/Your_are_Invited/blob/master/screenshots/Screenshot_2020-06-01%20You%60re%20Invited%20%F0%9F%A5%82.png)
 <h1> Common setup </h1>
 <hr>
 Clone the repo and install the dependencies.
