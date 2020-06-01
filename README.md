@@ -12,8 +12,6 @@ cd Your_are_Invited
 npm install
 npm install nodemon
 ```
-
-<h1> Steps for read-only access </h1>
 <hr>
 To start the express server, run the following
 
