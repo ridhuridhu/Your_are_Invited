@@ -169,7 +169,7 @@ router.post("/addEvent/:name",(req,res)=>{
     newInvitation.Footer=req.body.footer;
   }
   else if(nameEvent=="wedding"){
-    newInvitation.Header1=req.body.header1;
+    newInvitation.HeaderOne=req.body.header1;
     newInvitation.Footer=req.body.footer;
     newInvitation.picture="wedding.png";
   }else if (nameEvent=="funeral"){
