@@ -146,4 +146,39 @@ router.get("/view/:id",(req,res)=>{
 
 });
 
+//template route 
+
+router.get("/addEvent/:name",(req,res)=>{
+  let nameEvent=req.params.name;
+  res.render("addEventTemp",{name:nameEvent});
+ 
+});
+
+router.post("/addEvent/:name",(req,res)=>{
+  let nameEvent=req.params.name;
+  //console.log(req.body);
+  let newInvitation=new Invitation();
+  newInvitation.hostBy=req.user.id;
+  newInvitation.hostByName=req.user.name;
+  newInvitation.Header=req.body.header;
+  newInvitation.Body=req.body.body;
+  
+  
+  if(nameEvent=="birthday"){
+    newInvitation.picture="wine.png";
+    newInvitation.Footer=req.body.footer;
+  }
+  else if(nameEvent=="wedding"){
+    newInvitation.Header1=req.body.header1;
+    newInvitation.Footer=req.body.footer;
+    newInvitation.picture="wedding.png";
+  }else if (nameEvent=="funeral"){
+    newInvitation.picture="funeral.png";
+  }
+  newInvitation.save((err)=>{
+    if (err) throw err;
+    res.render("addEvent",{linkId:newInvitation.InvitaionId,user:req.user});
+  });
+});
+
 module.exports = router;

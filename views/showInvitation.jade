@@ -11,11 +11,35 @@ block content
                     a(href=`/view/${invitaion.InvitaionId}`) http://127.0.0.1:3000/view/#{invitaion.InvitaionId}
                 hr
         if invitaion
-            .imgCard
-                img(src='../image/card.jpg', alt='')
-                h1  #{invitaion.Header}
-                p #{invitaion.Body}
-                footer #{invitaion.Footer}
+            -if(invitaion.picture=="card.jpg"){
+                .imgCard  
+                    img(src=`../image/${invitaion.picture}`, alt='')
+                    h1  #{invitaion.Header}
+                    p #{invitaion.Body}
+                    footer #{invitaion.Footer}
+            -}
+            -if(invitaion.picture=="wine.png"){
+                .wineCard 
+                    img(src=`../image/${invitaion.picture}`, alt='')
+                    h1  #{invitaion.Header}
+                    p #{invitaion.Body}
+                    footer #{invitaion.Footer}
+            -}
+            -if(invitaion.picture=="wedding.png"){
+                .weddingCard
+                    img(src=`../image/${invitaion.picture}`, alt='')
+                    h1  #{invitaion.Header}
+                    h2 #{invitaion.HeaderOne}
+                    p #{invitaion.Body}
+            -}
+            -if(invitaion.picture=="funeral.png"){
+                .funeralCard
+                    img(src=`../image/${invitaion.picture}`, alt='')
+                    h1  #{invitaion.Header}
+                    p #{invitaion.Body}
+                    footer #{invitaion.Footer}
+            -}
+                
 
         
         else   

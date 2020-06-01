@@ -13,55 +13,75 @@
 <body class="container">
   <br>
   <br>
-  <div class="imgCard">
-    <img src="card.jpg" alt="">
-    <h1>Lorem ipsum dolor sit amet.</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+       <h1>Birthday</h1>
+      </div>
+      <div class="col">
+        <h1>Wedding</h1>
+      </div>
+      <div class="col">
+        <h1>Funeral</h1>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="funeralCard">
+    <img src="funeral.png" alt="">
+    <h1>Lorem ipsum dolor </h1>
     <p>Lorem ipsum dolor, Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, molestiae? sit amet consectetur adipisicing elit. Nisi, voluptas itaque quasi quae porro sint repellendus officia quos iste obcaecati sequi cum nobis laudantium blanditiis.</p>
     
-    <footer>
-      Lorem ipsum dolor sit amet.
-    </footer>
   </div>
+  
 
 </body>
 </html>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   body{
-    background-color: black;
+    background-color: white;
   }
-  .imgCard{
+  .funeralCard{
     width: 100%;
     max-width: 450px;
     text-align: center;
-    color: #303960;
-    text-shadow: 2px 1px pink;
+    color: 		white;
     margin: auto;
     border: 2px solid antiquewhite;
    
 
   }
-  .imgCard img{
+  .funeralCard img{
     width: 100%;
     max-width: 450px;
+    z-index: -5;
 
   }
-  .imgCard h1 {
+  .funeralCard h1 {
     position: relative;
     margin-top: -450px;
+    font-size: 50px;
     text-align: center;
-    font-family: serif;
-  }
-  .imgCard p{
-    margin-top: 50px;
-    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    z-index: +1;
+    text-shadow: 1px 1px whitesmoke;
+    text-transform: capitalize;
+  } 
+  .funeralCard p{
+    margin-top: 55px;
+    text-align:center;
+    width: 100%;
+    background-color: white;
+    text-shadow: 1px 1px black;
+    margin-left: 75px;
+    max-width: 300px;
     font-family: sans-serif;
-    font-weight: 500;
+    z-index: +1;
 
   }
-  .imgCard footer{
-    margin-top: 50px;
-    text-align: center;
-    font-weight: 500;
-  }
+  
 </style>
+
 

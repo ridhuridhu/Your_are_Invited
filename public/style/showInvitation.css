@@ -17,6 +17,7 @@
     margin-top: -450px;
     text-align: center;
     font-family: serif;
+    text-transform: capitalize;
   }
   .imgCard p{
     margin-top: 50px;
@@ -29,4 +30,129 @@
     margin-top: 50px;
     text-align: center;
     font-weight: 500;
+  }
+
+  .wineCard{
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: 		#8B0000;
+    margin: auto;
+    border: 2px solid antiquewhite;
+   
+
+  }
+  .wineCard img{
+    width: 100%;
+    max-width: 450px;
+    z-index: -5;
+
+  }
+  .wineCard h1 {
+    position: relative;
+    margin-top: -390px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Great Vibes', cursive;
+    z-index: +1;
+  }
+  .wineCard p{
+    margin-top: 50px;
+    text-align:center;
+    width: 100%;
+    margin-left: 35px;
+    max-width: 350px;
+    font-family: sans-serif;
+    font-weight: 500;
+    z-index: +1;
+
+  }
+  .wineCard footer{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
+    z-index: +1;
+  }
+  .weddingCard{
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: 		#8B0000;
+    margin: auto;
+    border: 2px solid antiquewhite;
+   
+
+  }
+  .weddingCard img{
+    width: 100%;
+    max-width: 450px;
+    z-index: -5;
+
+  }
+  .weddingCard h1 {
+    position: relative;
+    margin-top: -450px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    z-index: +1;
+    text-transform: capitalize;
+  } 
+  .weddingCard h2{
+    font-family: 'Great Vibes', cursive;
+    margin-top: 50px;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+  .weddingCard p{
+    margin-top: 65px;
+    text-align:center;
+    width: 100%;
+    background-color: white;
+    text-shadow: 1px 1px black;
+    margin-left: 100px;
+    max-width: 300px;
+    font-family: sans-serif;
+    font-weight: 500;
+    z-index: +1;
+
+  }
+
+  .funeralCard{
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    color: 		white;
+    margin: auto;
+    border: 2px solid antiquewhite;
+   
+
+  }
+  .funeralCard img{
+    width: 100%;
+    max-width: 450px;
+    z-index: -5;
+
+  }
+  .funeralCard h1 {
+    position: relative;
+    margin-top: -450px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    z-index: +1;
+    text-shadow: 1px 1px whitesmoke;
+    text-transform: capitalize;
+  } 
+  .funeralCard p{
+    margin-top: 55px;
+    text-align:center;
+    width: 100%;
+    background-color: white;
+    text-shadow: 1px 1px black;
+    margin-left: 75px;
+    max-width: 300px;
+    font-family: sans-serif;
+    z-index: +1;
+
   }

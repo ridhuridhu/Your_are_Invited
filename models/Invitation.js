@@ -8,12 +8,14 @@ const InvitaionSchema = new mongoose.Schema({
     },
     hostByName:{type:String},
     Header:{type:String},
+    HeaderOne:{type:String},
     Body:{type:String},
     Footer:{type:String},
     Date:{type:Date,default:Date.now()},
     EventOn:{type:String},
     Duration:{type:Number},
     private:{type:Boolean},
+    picture:{type:String,default:"card.jpg"},
     interestedBy:[{
         type:Schema.Types.ObjectId,ref:"User"
     }],

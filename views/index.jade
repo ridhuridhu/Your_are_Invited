@@ -10,6 +10,15 @@ block content
                 .col
                     a.btn(href="#") Total no.of Invitations Accepted : #{Accepted }
         hr
+        .card   
+            .row
+                .col
+                    a.btn(href="/addEvent/birthday") Birthday Template
+                .col
+                    a.btn(href="/addEvent/wedding") Wedding Template
+                .col
+                    a.btn(href="/addEvent/funeral") Funeral Template
+        hr
         if invitation
             -invitation.reverse();
                 .col
@@ -19,7 +28,8 @@ block content
                                 h3 #{invitation[i].Header}
                                 .row
                                     .col
-                                        p Event on #{invitation[i].EventOn}
+                                        if(invitation[i].EventOn)
+                                            p.text-muted Event on #{invitation[i].EventOn}
                                     .col
                                         p   -By #{invitation[i].hostByName}
                                 hr
