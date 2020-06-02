@@ -5,6 +5,9 @@ body{
     background-color: #B92B27;
     color: white;
 }
+.container{
+    margin-bottom: 55px;
+}
 .navbar a{
     color: white;
 }
@@ -75,4 +78,15 @@ button a{
 button:hover a{
     text-decoration: none;
     color: black;
+}
+.card {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border: 1px solid #B92B27;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px silver;
+
+
 }

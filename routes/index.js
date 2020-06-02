@@ -89,7 +89,7 @@ router.get("/iam/:user_id/interested/:invite_id",(req,res)=>{
   res.redirect("/");
 });
 
-//pending
+
 router.get("/iam/:user_id/not_interested/:invite_id/interestedBy/:j",(req,res)=>{
 //console.log(req.params);
 var j=JSON.parse(req.params.j);
@@ -181,4 +181,36 @@ router.post("/addEvent/:name",(req,res)=>{
   });
 });
 
+
+
+//accept decline via links from profile
+///iam/${user._id}/in/${invitaion.InvitaionId}
+//`/iam-not/${user._id}/in/${invitaion.InvitaionId}
+// InvitaionId
+router.get("/iam/:user_id/in/:inviteId",(req,res)=>{
+  var userId=req.params.user_id;
+  //console.log(req.params)
+  //var inviteId=req.params.inviteId;
+  Invitation.findOne({InvitaionId:req.params.inviteId},(err,invitaion)=>{
+    if (err) throw err;
+
+    invitaion.interestedBy.push(userId);
+    invitaion.save((err)=>{
+      if (err) throw err;
+      
+    });
+  });
+  //Invitation.findOneAndUpdate({InvitaionId:req.params.inviteId},{$pull:{"interestedBy":req.user._id}},(err,done)=>{
+    //if (err) throw err;
+
+    res.redirect(`/view/${req.params.inviteId}`);
+
+});
+
+router.get("/iam-not/:user_id/in/:inviteId",(req,res)=>{
+  Invitation.findOneAndUpdate({InvitaionId:req.params.inviteId},{$pull:{"interestedBy":req.user._id}},(err,done)=>{
+    if(err) throw err;
+    res.redirect(`/view/${req.params.inviteId}`);
+  });
+});
 module.exports = router;

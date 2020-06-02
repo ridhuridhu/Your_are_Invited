@@ -4,35 +4,35 @@ block content
     .card
         form(action=`/addEvent/${name}`, method="post")
             .form-group
-            -if(name=="birthday"){
-                label(for="") Name of the person
-                input.form-control(type="text", name="header",placeholder="name of the birthday baby")
-                label(for="") Events Details 
-                input.form-control(type="text", name="body")
-                label(for="") FootNotes
-                input.form-control(type="text", name="footer")
-                hr
-                input.btn.btn-danger(type='submit', value='Submit')
-            
-            
-            -}
-            -else if(name=="wedding"){
-                label(for="") Name of the person (male)
-                input.form-control(type="text", name="header",placeholder="")
-                label(for="") Name of the person (female)
-                input.form-control(type="text", name="header1",placeholder="")
-                label(for="") Events Details 
-                input.form-control(type="text", name="body")
-                label(for="") FootNotes
-                input.form-control(type="text", name="footer")
-                hr
-                input.btn.btn-danger(type='submit', value='Submit')
-            -}
-            -else if(name=="funeral") {
-                label(for="") Name of the person
-                input.form-control(type="text", name="header",placeholder="")
-                label(for="") Events Details 
-                input.form-control(type="text", name="body")
-                hr
-                input.btn.btn-danger(type='submit', value='Submit')
-            -}
+                -if(name=="birthday"){
+                    label(for="") Name of the person
+                    input.form-control(type="text", name="header",placeholder="name of the birthday baby")
+                    label(for="") Events Details 
+                    input.form-control(type="text", name="body")
+                    label(for="") FootNotes
+                    input.form-control(type="text", name="footer")
+                    hr
+                    input.btn.btn-danger(type='submit', value='Submit')
+                
+                
+                -}
+                -else if(name=="wedding"){
+                    label(for="") Name of the person (male)
+                    input.form-control(type="text", name="header",placeholder="")
+                    label(for="") Name of the person (female)
+                    input.form-control(type="text", name="header1",placeholder="")
+                    label(for="") Events Details 
+                    input.form-control(type="text", name="body")
+                    label(for="") FootNotes
+                    input.form-control(type="text", name="footer")
+                    hr
+                    input.btn.btn-danger(type='submit', value='Submit')
+                -}
+                -else if(name=="funeral") {
+                    label(for="") Name of the person
+                    input.form-control(type="text", name="header",placeholder="")
+                    label(for="") Events Details 
+                    input.form-control(type="text", name="body")
+                    hr
+                    input.btn.btn-danger(type='submit', value='Submit')
+                -}
