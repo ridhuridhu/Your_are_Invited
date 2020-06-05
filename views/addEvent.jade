@@ -17,13 +17,13 @@ block content
                 input.form-control(type='text', name='header', id='', placeholder='enter Title')
                 .form-group
                 label(for='') Content :
-                input.form-control(type='text',style="height:300px", name='body', id='', placeholder='describe your event')
+                input.form-control(type='textarea', rows="4" cols="50",name='body', id='', placeholder='describe your event')
                 label(for='') Private Event  :
                 input(type='checkbox', name='private', id='', )
                 p Tick if Private Event 
                 .text-muted ** private Event can only be shared by invited link
                 label(for='') Event On :
-                input.form-control(type='text', name='eventOn', id='', placeholder='schedule event date')
+                input.form-control(type='date', name='eventOn', id='', placeholder='schedule event date')
                 .text-muted ex:12/12/2020
                 label(for='') Last Date to Accept Invitaion :
                 input.form-control(type='number', name='duration', id='', placeholder='Duration number of days') 
