@@ -18,7 +18,7 @@ router.get("/logout",(req,res)=>{
     res.redirect('login');
 });
 
-
+//1  2  3  4 5 
 router.post("/register",(req,res)=>{
     let errors = [];
 
