@@ -8,7 +8,7 @@ block content
         if(user)
             -if ( JSON.stringify(invitaion.hostBy)== JSON.stringify(user._id))
                 h6 Your invite Link is: 
-                    a(href=`/view/${invitaion.InvitaionId}`) http://127.0.0.1:3000/view/#{invitaion.InvitaionId}
+                    a(href=`/view/${invitaion.InvitaionId}`) https://invite-you.herokuapp.com/view/#{invitaion.InvitaionId}
                 hr
             -else 
                 a.btn(href=`/iam/${user.userId}/interested/${invitaion.InvitaionId}`) Accept
