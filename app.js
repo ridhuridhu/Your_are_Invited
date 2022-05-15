@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const server = require('http').createServer(app);
 const session = require('express-session');
 const mongoose = require('mongoose');
@@ -18,6 +19,9 @@ app.use(bodyParser.urlencoded({
 	extended: false
 }));
 app.use(bodyParser.json());
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 app.use(session({
 	secret: 'abc123',
 	resave: true,
